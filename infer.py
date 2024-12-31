@@ -7,16 +7,16 @@ from cuda_malloc import cuda_malloc_supported
 import torch.nn.functional as F
 from torchvision.transforms import Compose
 
-from MimicBrush.depthanything.fast_import import depth_anything_model 
-from MimicBrush.depthanything.depth_anything.util.transform import Resize, NormalizeImage, PrepareForNet
+from .MimicBrush.depthanything.fast_import import depth_anything_model 
+from .MimicBrush.depthanything.depth_anything.util.transform import Resize, NormalizeImage, PrepareForNet
 
 from diffusers import AutoencoderKL, UNet2DConditionModel, DDIMScheduler
 from diffusers.image_processor import VaeImageProcessor
 
-from MimicBrush.mimicbrush import MimicBrush_RefNet
-from MimicBrush.models.depth_guider import DepthGuider
-from MimicBrush.models.ReferenceNet import ReferenceNet
-from MimicBrush.models.pipeline_mimicbrush import MimicBrushPipeline
+from .MimicBrush.mimicbrush import MimicBrush_RefNet
+from .MimicBrush.models.depth_guider import DepthGuider
+from .MimicBrush.models.ReferenceNet import ReferenceNet
+from .MimicBrush.models.pipeline_mimicbrush import MimicBrushPipeline
 
 
 from modelscope.hub.snapshot_download import snapshot_download as ms_snapshot_download
